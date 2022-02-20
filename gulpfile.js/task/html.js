@@ -1,19 +1,19 @@
 const { src, dest, } = require("gulp")
 
 
-// Конфигурация
+// Configuration
 const path = require("../config/path.js");
 const app = require("../config/app.js");
 
 
-//Плагины
+// Plugins
 const gp = require("gulp-load-plugins")();
 const htmlMin = require("gulp-htmlmin");
 const gulpif = require("gulp-if");
 
 
 
-// Обрабатываем HTML
+// Handling HTML
 const html = () => {
     return src(path.html.src)
         .pipe(gp.plumber({

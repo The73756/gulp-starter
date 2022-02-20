@@ -1,17 +1,17 @@
 const { src, dest } = require("gulp")
 
 
-// Конфигурация
+// Configuration
 const path = require("../config/path.js");
 const app = require("../config/app.js");
 
 
-//Плагины
+// Plugins
 const gp = require("gulp-load-plugins")();
 const sass = require("gulp-sass")(require("sass"));
 
 
-// Обрабатка SCSS
+// Handling SCSS
 const scss = () => {
     return src(path.scss.src, { sourcemaps: app.isDev  })
         .pipe(gp.plumber({

@@ -1,9 +1,9 @@
 const del = require("del");
 
-// Конфигурация
+// Configuration
 const path = require("../config/path.js");
 
-// Удаление дирректорий
+// Removing a directory
 const clear = () => {
     return del(path.root);
 }

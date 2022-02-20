@@ -1,16 +1,16 @@
 const { src, dest } = require("gulp")
 
 
-// Конфигурация
+// Configuration
 const path = require("../config/path.js");
 const app = require("../config/app.js");
 
 
-//Плагины
+// Plugins
 const gp = require("gulp-load-plugins")();
 
 
-// Обработка Font
+// Handling Font
 const font = () => {
     return src(path.font.src)
         .pipe(gp.plumber({

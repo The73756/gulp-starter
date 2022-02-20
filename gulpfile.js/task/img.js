@@ -1,17 +1,17 @@
 const { src, dest } = require("gulp")
 
 
-// Конфигурация
+// Configuration
 const path = require("../config/path.js");
 const app = require("../config/app.js");
 
 
-//Плагины
+// Plugins
 const gp = require("gulp-load-plugins")();
 const gulpif = require("gulp-if");
 
 
-// Обработка Image
+// Handling Image
 const img = () => {
     return src(path.img.src)
         .pipe(gp.plumber({

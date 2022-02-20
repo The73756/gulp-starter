@@ -2,12 +2,12 @@ const { watch, series, parallel } = require("gulp")
 const browserSync = require("browser-sync").create()
 
 
-// Конфигурация
+// Configuration
 const path = require("./config/path.js");
 const app = require("./config/app.js");
 
 
-// Задачи
+// Tasks
 const clear = require('./task/clear.js');
 // const pug = require('./task/pug.js');
 // const scss = require('./task/scss.js');
@@ -18,7 +18,7 @@ const html = require('./task/html.js');
 const css = require('./task/css.js');
 
 
-// Сервер 
+// Server
 const server = () => {
     browserSync.init({
        server: {
@@ -28,7 +28,7 @@ const server = () => {
 }
 
 
-// Наблюдение
+// Observation
 const watcher = () => {
     // watch(path.pug.watch, pug).on("all", browserSync.reload);
     // watch(path.scss.watch, scss).on("all", browserSync.reload);
@@ -50,7 +50,7 @@ const dev = series(
 );
 
 
-// Задачи
+// Tasks
 // exports.pug = pug;
 // exports.scss = scss;
 exports.html = html;
@@ -60,7 +60,7 @@ exports.img = img;
 exports.font = font;
 
 
-// Сборка
+// Building
 exports.default = app.isProd
     ? build
     : dev;
